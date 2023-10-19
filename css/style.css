@@ -1,0 +1,219 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none; /*Disable Scrollbar in FF*/
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+html::-webkit-scrollbar{
+    display: none; /*Disable Scrollbar in Chrome*/
+}
+@font-face {
+    font-family: 'Bruce Forever';
+    src: url(./BruceForeverRegular-X3jd2.ttf);
+}
+:root{
+    --animate-font: 'Bruce Forever';
+    --main-font: 'Inter';
+}
+*{
+    font-family: var(--main-font);
+    color: white;
+}
+.navbar{
+    background-color: #002034;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1em;
+    height: 62px;
+    transition: 0.3s height;
+}
+.expicon{
+    display: none;
+    cursor: pointer;
+}
+.exp{
+    height: 2px;
+    margin: 6px;
+    width: 20px;
+    background-color: white;
+}
+.links{
+    display: flex;
+}
+.link{
+    text-decoration: none;
+    margin: 5px;
+}
+.link:hover{
+    margin: 5px;
+    text-decoration: underline;
+    text-decoration-color: #1e90ff;
+    text-decoration-thickness: 2px;
+}
+.ul{
+    text-decoration: underline;
+    text-decoration-color: #1e90ff;
+    text-decoration-thickness: 2px;
+}
+.carousel{
+    height: 92vh;
+    background-image: url('../img/23143245.png');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.carousel .center{
+    text-align: center;
+}
+.carousel h1{
+    font-size: 8vw;
+    animation: showUp 0.9s;
+}
+.carousel p{
+    font-size: 3vw;
+}
+.animate{
+    font-family: var(--animate-font) !important;
+    text-align: center;
+}
+.animate-{
+    font-family: var(--animate-font) !important;
+}
+.about{
+    background-color: #000214;
+    padding: 1em;
+    text-align: center;
+}
+.valuescontent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.val-item{
+    background-color: #dadada17;
+    padding: 1em;
+    border-radius: 8px;
+}
+.episodes{
+    padding: 2em;
+    background-color: #002034;
+}
+.episode{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #dadada17;
+    border-radius: 1em;
+    word-wrap: normal;
+    margin-block: 10px;
+}
+.episode .title{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+a.play{
+    background-color: #fff;
+    color: black !important;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 1em;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 10px;
+}
+a.play:active{
+    background-color: #fff;
+    color: black !important;
+    border-radius: 10px;
+    transform: scale(0.95);
+    cursor: pointer;
+    border: none;
+    padding: 1em;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 10px;
+}
+a svg{
+    color: black;
+}
+.footer{
+    background-color: #000214;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.link-image{
+    margin: 5px;
+    text-decoration: none;
+}
+
+@keyframes showUp{
+    0%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7    
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media(max-width:700px){
+    .viz{
+        display: none;
+    }
+    .col{
+        flex-direction: column;
+        text-align: center;
+    }
+    .expicon{
+        display: block;
+        padding: 10px;
+    }
+    .hclass{
+        height: 193px;
+    }
+}
